@@ -161,3 +161,32 @@ body {
     text-decoration: none;
     color: #F1F1F1;
 }
+/*5 - Banner*/
+/*5.1 - Container do banner*/
+#banner {
+    box-shadow: 0 4px 5px -2px gray;
+    margin-bottom: 30px;
+}
+/*5.2 - Imagem do banner*/
+#banner img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+/*5.3 - Corpo do texto do banner*/
+#banner .card-body {
+    background-color: white;
+    color:#1E1E1E;
+}
+/*5.4 - Título do banner*/
+#banner .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+}
+/*5.5 - Parágrafo do banner*/
+#banner .card-text {
+    width: 60%; /*Alterar valor para versão mobile*/
+    font-weight: 300;
+}
+/*6 - Novidades*/
