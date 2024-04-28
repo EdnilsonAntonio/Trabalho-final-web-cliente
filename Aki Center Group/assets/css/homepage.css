@@ -123,7 +123,6 @@ body {
 }
 /*4.1 - Título da secção*/
 .section-title {
-    width: 100%; /* Retirar na versão mobile */
     color: #1786F9;
     font-size: 30px;
     font-weight: bolder;
@@ -189,4 +188,11 @@ body {
     width: 60%; /*Alterar valor para versão mobile*/
     font-weight: 300;
 }
-/*6 - Novidades*/
+/*6 - Mais vendidos*/
+#most-sold {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 5px -2px gray;
+}
+#most-sold .btn-container {
+    padding-bottom: 50px;
+}
