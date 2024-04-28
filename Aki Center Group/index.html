@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page - Seja bem-vindo à Aki Center Group</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/homepage.css" />
+    <!--Fontsawesome-->
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header id="header">
+      <!--Classe navbar do Bootstrap-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/assets/img/brand/logotipo.png" alt="Aki Center Group" id="logotipo-navbar"></a>
+          <!--Toggler de expansão para dispositivos móveis-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Lista de links da navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Mais vendidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Novidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pré-reserva</a>
+              </li>
+              <!--Link dropdown-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <!--Menu do link dropdown-->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Streaming</a></li>
+                  <li><a class="dropdown-item" href="#">Gaming</a></li>
+                  <li><a class="dropdown-item" href="#">Soluções financeiras</a></li>
+                  <li><a class="dropdown-item" href="#">Marketing</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Pesquisar manualmente</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Formulário de pesquisa-->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"> <!--Barra de pesquisa-->
+              <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> <!--Botão de pesquisa-->
+              <!--Carrinho de compras-->
+              <a href="" class="btn">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main-->
+    <main id="main">
+      <!--Carrousel-->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <!--Indicadores do carrousel-->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!--Conteúdo interno do carrousel-->
+        <div class="carousel-inner">
+          <!--Slider 1-->
+          <div class="carousel-item active">
+            <img src="/assets/img/sliders/tekken 8.avif" class="d-block w-100" alt="Tekken 8">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">TEKKEN 8</h5>
+              <p class="slider-caption">Prepara-te para o próximo capítulo da lendária série de jogos de luta, o TEKKEN 8.</p>
+              <button class="btn btn-primary slider-btn">Obter agora</button>
+            </div>
+          </div>
+          <!--Slider 2-->
+          <div class="carousel-item">
+            <img src="/assets/img/sliders/nba2k24.avif" class="d-block w-100" alt="NBA 2K24">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">NBA 2K24</h5>
+              <p class="slider-caption">Reúne a tua equipa e vive o passado, o presente e o futuro da cultura basquetebolista no NBA 2K24.</p>
+              <button class="btn btn-primary slider-btn">Obter agora</button>
+            </div>  
+          </div>
+          <!--Slider 3-->
+          <div class="carousel-item">
+            <img src="/assets/img/sliders/cod mw3.avif" class="d-block w-100" alt="Call Of Duty: Modern Warfare III">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">Call of Duty®: Modern Warfare® III</h5>
+              <p class="slider-caption">Adapta-te ou morre numa luta contra a derradeira ameaça.</p>
+              <button class="btn btn-primary slider-btn">Obter agora</button>
+            </div>
+          </div>
+        </div>
+        <!--Controles do carrousel: Prev-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <!--Controles do carrousel: Next-->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Categorias-->
+      <div id="categories">
+        <div class="container">
+          <h3 class="categories-title">Compre por categorias</h3>
+          <!--Grupo de categorias-->
+          <div class="row categories-group">
+            <!-- Categoria 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/streaming.png" alt="Streaming">
+                  <h3 class="category-title">Streaming</h3>
+                </a>
+              </div>
+            </div>
+            <!-- Categoria 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/gaming.png" alt="Gaming">
+                  <h3 class="category-title">Gaming</h3>
+                </a>
+              </div>
+            </div>
+            <!--Categoria 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/solucoes financeiras.png" alt="Soluções Financeiras">
+                  <h3 class="category-title">Financeiro</h3>
+                </a>
+              </div>
+            </div>
+            <!--Categoria 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/marketing.png" alt="Marketing">
+                  <h3 class="category-title">Marketing</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Fim grupo de categorias-->
+        </div>
+      </div>
+      <!--Recomendado para si-->
+      <div id="recommended">
+        <!--Título-->
+        <h3 class="section-title">Recomendado para si</h3>
+        <!--Conteúdo-->
+        <div class="container">
+          <!--Conjunto de produtos-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA Sports FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA Sports FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/cod mw3.jpg" class="card-img-top" alt="Call Of Duty®: Modern Warfare® III">
+                <div class="card-body">
+                  <h5 class="card-title">Call Of Duty®: Modern Warfare® III</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Fim conjunto de produtos-->
+          </div>
+        </div>
+        <!--Botão "Ver mais"-->
+        <div class="btn-container">
+          <button class="btn btn-primary see-more">
+            <a href="">Ver mais</a>
+          </button>
+        </div>
+      </div>
+      <!--Banner-->
+      <div id="banner"></div>
+    </main>
+    <!--Rodapé-->
+    <footer id="footer">
+
+    </footer>
+    <!--Bootstrap-->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!--JavaScript-->
+    <script src="/assets/js/homepage.js"></script>
+  </body>
+</html>
