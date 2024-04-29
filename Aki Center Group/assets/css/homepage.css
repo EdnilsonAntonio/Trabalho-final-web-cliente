@@ -237,6 +237,15 @@ body {
     text-align: center;
     margin: 0;
 }
+/*8 - Botão flutuante*/
+#top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background-color:#1E1E1E;
+    border-color: #F1F1F1;
+}
 /*Responsividade: Telemóvel*/
 @media screen and (max-width: 767px) {
     /*1 - Carrousel*/
