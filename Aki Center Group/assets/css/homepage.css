@@ -196,3 +196,41 @@ body {
 #most-sold .btn-container {
     padding-bottom: 50px;
 }
+/*7 - Rodapé*/
+
+#footer {
+    background-color: #1E1E1E;
+    color: #F1F1F1;
+}
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-list-item a {
+    text-decoration: none;
+    color: #F1F1F1;
+    transition: 0.5s ease-in-out;
+}
+.footer-list-item a:hover {
+    color: #1786F9;
+    transition: 0.5s ease-in-out;
+}
+.footer-btn {
+    background-color: #1E1E1E;
+    border-color: #F1F1F1;
+}
+.copyright {
+    text-align: center;
+    margin: 0;
+}
