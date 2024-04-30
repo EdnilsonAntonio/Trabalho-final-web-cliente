@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/brand/logotipo.png" type="image/x-icon">
+    <title>Mais vendidos</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/most-sold.css" />
+    <!--Fontsawesome-->
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header id="header">
+      <!--Classe navbar do Bootstrap-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/assets/img/brand/logotipo.png" alt="Aki Center Group" id="logotipo-navbar"></a>
+          <!--Toggler de expansão para dispositivos móveis-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Lista de links da navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Mais vendidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Novidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pré-reserva</a>
+              </li>
+              <!--Link dropdown-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <!--Menu do link dropdown-->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Streaming</a></li>
+                  <li><a class="dropdown-item" href="#">Gaming</a></li>
+                  <li><a class="dropdown-item" href="#">Soluções financeiras</a></li>
+                  <li><a class="dropdown-item" href="#">Marketing</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Pesquisar manualmente</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Formulário de pesquisa-->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"> <!--Barra de pesquisa-->
+              <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> <!--Botão de pesquisa-->
+              <!--Carrinho de compras-->
+              <a href="" class="btn">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main-->
+    <main id="main">
+      <!--Banner estático--> <!--Template carrousel-->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <!--Conteúdo interno-->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/img/banners/Mais vendidos pc.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">Os mais vendidos</h5>
+              <p class="slider-caption">Dos jogos mais emocionantes aos Gift Cards mais desejados, explore nossos best-sellers digitais e entre na diversão instantânea!</p>
+              <a class="btn btn-primary slider-btn" href="#most-sold">Ver tudo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Mais vendidos-->
+      <div id="most-sold">
+        <!--Título-->
+        <h3 class="section-title">Mais vendidos</h3>
+        <!--Conteúdo-->
+        <div class="container">
+          <!--Linha 1-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA SPORTS FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA SPORTS FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Kamba">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Kamba</h5>
+                  <p class="card-text">6.500Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Linha 2-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA SPORTS FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA SPORTS FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Kamba">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Kamba</h5>
+                  <p class="card-text">6.500Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Linha 3-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA SPORTS FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA SPORTS FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Kamba">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Kamba</h5>
+                  <p class="card-text">6.500Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Linha 4-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA SPORTS FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA SPORTS FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Kamba">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Kamba</h5>
+                  <p class="card-text">6.500Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Linha 5-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA SPORTS FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA SPORTS FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Kamba">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Kamba</h5>
+                  <p class="card-text">6.500Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Linha 6-->
+          <div class="row">
+            <!--Produto 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/ea sports fc 24.jpg" class="card-img-top" alt="EA SPORTS FC 24">
+                <div class="card-body">
+                  <h5 class="card-title">EA SPORTS FC 24</h5>
+                  <p class="card-text">36.000Kz</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Solo">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Solo</h5>
+                  <p class="card-text">4.250Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card" style="width: 18rem;">
+                <img src="/assets/img/cards/netflix.jpeg" class="card-img-top" alt="Netflix: Plano Kamba">
+                <div class="card-body">
+                  <h5 class="card-title">Netflix: Plano Kamba</h5>
+                  <p class="card-text">6.500Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Produto 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12 card-container">
+              <!--Card-->
+              <div class="card product-card" style="width: 18rem;">
+                <img src="/assets/img/cards/prime video.png" class="card-img-top" alt="Prime Video: Plano d'Ouro">
+                <div class="card-body">
+                  <h5 class="card-title">Prime Video: Plano d'Ouro</h5>
+                  <p class="card-text">6.000Kz p/mês</p>
+                  <!--Ações do card-->
+                  <div class="card-actions">
+                    <a href="" class="btn btn-primary">Obter agora</a>
+                    <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Botão "Ver mais"-->
+      </div>
+    </main>
+    <!--Rodapé-->
+    <footer id="footer">
+      <!--Cabeçalho-->
+      <div class="footer-logo-container"><img src="/assets/img/brand/logotipo.png" alt="" class="footer-logo"></div>
+      <!--Conteúdo-->
+      <div class="container">
+        <!--Conjunto de colunas-->
+        <div class="row footer-content">
+          <!--Coluna 1-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Links úteis</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item"><a href="" class="footer-list-link">Termos de utilização do site</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Mapa do site</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Assistência</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Informações legais</a></li>
+            </ul>
+          </div>
+          <!--Coluna 2-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Redes sociais</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item"><a href="" class="footer-list-link">Facebook</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Instagram</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">WhatsApp</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">X</a></li>
+            </ul>
+          </div>
+          <!--Coluna 3-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Fale connosco</h4>
+            <p class="footer-text">Preencha um breve formulário e será respondido em até 48h.</p>
+            <a href="" class="btn btn-primary footer-btn">Falar agora</a>
+          </div>
+        </div>
+        <!--Fim conjunto de colunas-->
+      </div>
+      <!--Rodapé-->
+      <p class="copyright">© 2024 Aki Center Group, Ednilson António. Todos os direitos reservados.</p>
+    </footer>
+    <!--Botão flutuante-->
+    <button id="top-btn" class="btn" onclick="scrollBody(), toTheTop()">
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <!--Bootstrap-->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!--JavaScript-->
+    <script src="/assets/js/homepage.js"></script>
+  </body>
+</html>
