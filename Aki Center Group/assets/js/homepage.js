@@ -1,6 +1,7 @@
 // Botão para voltar ao topo da página
 // 1 - Variável do botão
 let button = document.getElementById('top-btn')
+button.style.visibility = 'hidden' // Botão já começa escondido ao carregar a página
 // 2 - Ao rolar. executar a função "scrollBody"
 window.onscroll = function() {scrollBody()}
 // 3 - Função "scrollBody": Serve dizer quando o botão deve ou não aparecer
