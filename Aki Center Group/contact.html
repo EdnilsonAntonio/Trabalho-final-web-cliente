@@ -72,7 +72,89 @@
     <main id="main">
       <!--Contacto-->
       <div id="contact">
-        
+        <div class="container">
+          <div class="row">
+            <!--Grupo de texto-->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="contact-text">
+                <h1 class="contact-title">Contacte-nos</h1>
+                <p class="contact-text">
+                  Entre em contacto connosco e seja respondido em até 48h.
+                </p>
+                <h3 class="contact-subtitle">Horas de contacto (África central)</h3>
+                <p class="contact-text">Segunda à Sábado: 13:00h - 19:00h<br>Domingos: Fechados</p>
+                <h3 class="contact-subtitle">Meios de suporte</h3>
+                <p class="contact-text">WhatsApp: +244 943 060 625<br>E-mail: suporte.akicentergroup@gmail.com</p>
+              </div>
+            </div>
+            <!--Formulário-->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <form id="form" action="">
+                <div class="container">
+                  <!--Campos-->
+                  <div class="row">
+                    <!--Nome-->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <input required type="text" class="form-control" id="floatingInput" placeholder="Nome">
+                        <label for="floatingInput">Nome</label>
+                      </div>
+                    </div>
+                    <!--Sobrenome-->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Sobrenome">
+                        <label for="floatingInput">Sobrenome</label>
+                      </div>
+                    </div>
+                    <!--E-mail-->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <input required type="email" class="form-control" id="floatingInput" placeholder="E-mail">
+                        <label for="floatingInput">E-mail</label>
+                        <div id="emailHelp" class="form-text">Nunca compartilharemos o seu e-mail com mais ninguém.</div>
+                      </div>
+                    </div>
+                    <!--Tratamento-->
+                    <div class="col-lg-6 col-md-g col-sm-12 mb-3">
+                      <select class="form-select treatment" aria-label="Default select example">
+                        <option selected>Tratamento</option>
+                        <option value="1">Senhor (Sr.)</option>
+                        <option value="2">Senhora (Sra.)</option>
+                      </select>
+                    </div>
+                    <!--Assunto-->
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-3">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Assunto</option>
+                        <option value="1">Feedback</option>
+                        <option value="2">Sugestão</option>
+                        <option value="3">Reclamação</option>
+                      </select>
+                      <div id="subjectHelp" class="form-text">Selecione um assunto para ser respondido mais rápido.</div>
+                    </div>
+                    <!--Mensagem-->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Mensagem" style="height: 100px" required></textarea>
+                        <label for="floatingTextarea">Mensagem</label>
+                      </div>
+                    </div>
+                    <!--Botão-->
+                    <div class="col-lg-12 col-md-12 col-sm-12 submit-btn">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                  </div>
+                  <!--Fim campos-->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <!--Rodapé-->
