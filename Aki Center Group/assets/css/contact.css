@@ -2,6 +2,7 @@
 body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    padding-top: 56px;
 }
 /*--ícones*/
 .fa {
@@ -15,6 +16,8 @@ body {
 /*1.1 - Cor de fundo*/
 .navbar {
     background-color: #1E1E1E;
+    box-shadow: 0 4px 5px -2px rgb(57, 54, 54);
+    margin-top: 0px;
 }
 /*1.2 - Cor dos links*/
 .nav-link {
