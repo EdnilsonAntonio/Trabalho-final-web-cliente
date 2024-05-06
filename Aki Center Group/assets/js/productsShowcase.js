@@ -23,7 +23,7 @@ const products = [
     Category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
-    sales: 10,
+    sales: 40,
     releaseDate: new Date(2021, 3, 17)
   },
   // Netflix: Plano Kamba
@@ -35,7 +35,7 @@ const products = [
     Category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
-    sales: 10,
+    sales: 15,
     releaseDate: new Date(2021, 3, 17)
   },
   // Amazon Prime: Plano d'Ouro
@@ -49,7 +49,7 @@ const products = [
     rating: 5.0,
     sales: 10,
     releaseDate: new Date(2021, 3, 17)
-  }
+  },
 ];
 // 2 - Template do produto
 const productCardTemplate = (product) => {
@@ -69,13 +69,33 @@ const productCardTemplate = (product) => {
       </div>
     `;
 };
-// 3 - Função "generateProductCards": Serve para adicionar o produto na secção de produtos no HTML
-const generateProductCards = () => {
-  const productCardsHTML = products.map(productCardTemplate).join("");
-  document.querySelector(".products").innerHTML = productCardsHTML;
+// 3 - Funções para gerar os produtos
+// 3.1 - Recomendados
+const generateRecommendedProducts = () => {
+  const recommendedProducts = products.filter(product => product.rating >= 4);
+  const productCardsHTML = recommendedProducts.map(productCardTemplate).join("");
+  document.querySelector(".recommended-products").innerHTML = productCardsHTML;
 };
-// 4 - Chama a função assim que o documento for carregado
 document.addEventListener("DOMContentLoaded", () => {
-  generateProductCards();
+  generateRecommendedProducts();
 });
-// products.sort(() => Math.random() - 0.5); - Baralhar a lista de produtos
+// 3.2 - Mais vendidos
+const generateBestSellingProducts = () => {
+  // Filtro: 10 vendas para cima | Ordem: Decrescente
+  const bestSellingProducts = products.filter(product => product.sales >= 10).sort((a, b) => b.sales - a.sales);
+  const productCardsHTML = bestSellingProducts.map(productCardTemplate).join("");
+  document.querySelector(".best-selling-products").innerHTML = productCardsHTML;
+};
+document.addEventListener("DOMContentLoaded", () => {
+  generateBestSellingProducts();
+});
+// 3.3 - Mais recentes
+const generateMostRecentProducts = () => {
+  // Ordenar por lançamento. Trocar o "a" pelo "b" para inverter a ordem
+  const mostRecentProducts = products.sort((a, b) => b.releaseDate - a.releaseDate); 
+  const productCardsHTML = mostRecentProducts.map(productCardTemplate).join("");
+  document.querySelector(".most-recent-products").innerHTML = productCardsHTML;
+};
+document.addEventListener("DOMContentLoaded", () => {
+  generateMostRecentProducts();
+});
