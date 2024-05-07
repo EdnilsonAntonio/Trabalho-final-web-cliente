@@ -17,7 +17,7 @@ body {
 /*1.1 - Cor de fundo*/
 .navbar {
     background-color: #1E1E1E;
-    box-shadow: 0 4px 5px -2px rgb(57, 54, 54);
+    box-shadow: 0 14px 15px -2px rgba(0, 0, 0, .12);
     margin-top: 0px;
 }
 /*1.2 - Cor dos links*/

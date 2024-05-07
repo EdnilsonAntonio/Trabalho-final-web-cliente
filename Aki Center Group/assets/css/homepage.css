@@ -17,7 +17,7 @@ body {
 /*1.1 - Cor de fundo*/
 .navbar {
     background-color: #1E1E1E;
-    box-shadow: 0 4px 5px -2px rgb(57, 54, 54);
+    box-shadow: 0 14px 15px -2px rgba(0, 0, 0, .12);
     margin-top: 0px;
 }
 /*1.2 - Cor dos links*/
@@ -92,7 +92,7 @@ body {
 /*3.1 - Containers*/
 #categories {
     margin-bottom: 30px;
-    box-shadow: 0 4px 5px -2px gray;
+    box-shadow: 0 14px 15px -2px rgba(0, 0, 0, .12);
 }
 /*3.2 - Título da secção*/
 .categories-title {
@@ -172,7 +172,7 @@ body {
 /*5 - Banner*/
 /*5.1 - Container do banner*/
 #banner {
-    box-shadow: 0 4px 5px -2px gray;
+    box-shadow: 0 14px 15px -2px rgba(0, 0, 0, .12);
     margin-bottom: 30px;
 }
 /*5.2 - Imagem do banner*/
@@ -200,7 +200,7 @@ body {
 /*6 - Mais vendidos*/
 #most-sold {
     margin-bottom: 30px;
-    box-shadow: 0 4px 5px -2px gray;
+    box-shadow: 0 14px 15px -2px rgba(0, 0, 0, .12);
 }
 #most-sold .btn-container {
     padding-bottom: 50px;
