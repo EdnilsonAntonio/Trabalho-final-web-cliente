@@ -78,26 +78,35 @@ body {
     font-size: 30px;
     font-weight: bolder;
     text-align: start;
-    margin: 30px 0 70px 30px;
+    margin: 30px 0 30px 30px;
 }
-/*3.2 - Corpo do card*/
+/*3.2 - Descrição da secção*/
+.section-description {
+    color: #1E1E1E;
+    font-size: 15px;
+    font-weight:400;
+    text-align: start;
+    margin: 10px 0 70px 30px;
+    width: 50%;
+}
+/*3.3 - Corpo do card*/
 .card-body {
     background-color: #1E1E1E;
     color: #F1F1F1;
     border-radius: 0px 0px 5px 5px;
 }
-/*3.3 - Título do card*/
+/*3.4 - Título do card*/
 .card-title {
     font-size: 20px;
     font-weight: bold;
     height: 50px;
 }
-/*3.4 - Ações do card*/
+/*3.5 - Ações do card*/
 .card-actions {
     display: flex;
     justify-content: space-between;
 }
-/*3.5 - Botão "Ver mais"*/
+/*3.6 - Botão "Ver mais"*/
 .btn-container {
     display: flex;
     justify-content: center;
@@ -169,10 +178,19 @@ body {
         pointer-events:visible;
     }
     /*2 - Secções*/
+    /*2.1 - Título*/
     .section-title {
         margin-left: 0;
         margin-top: 50px;
         text-align: center;
+    }
+    /*2.2 - Descrição*/
+    .section-description {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+        padding: 0px 10px 0px 10px;
     }
     .card-container {
         display: flex;
