@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 3.3 - Mais recentes
 const generateMostRecentProducts = () => {
   // Ordenar por lançamento. Trocar o "a" pelo "b" para inverter a ordem
-  const mostRecentProducts = products.sort((a, b) => b.releaseDate - a.releaseDate); 
+  const mostRecentProducts = products.sort((a, b) => b.releaseDate - a.releaseDate);
   const productCardsHTML = mostRecentProducts.map(productCardTemplate).join("");
   document.querySelector(".most-recent-products").innerHTML = productCardsHTML;
 };
@@ -196,28 +196,43 @@ document.addEventListener("DOMContentLoaded", () => {
   generateMostRecentProducts();
 });
 //4 - Pesquisa de produtos
+// 4.1 - Na página de pesquisa de produtos
 document.addEventListener("DOMContentLoaded", () => {
-  const searchForm = document.getElementById("search-form");
+  const searchForm = document.getElementById("search-form"); // Pega o formulário de pesquisa
+  // Quando o formulário for submetido, faça o seguinte:
   searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const searchInput = document.querySelector('input[name="search"]'); // Pega o valor do input
-    const searchTerm = searchInput.value.trim().toLowerCase(); // Converte o valor do input para minúsculo
-    // Filtra os produtos com base no termo de pesquisa
+    const searchInput = document.querySelector('input[name="search"]');
+    const searchTerm = searchInput.value.trim().toLowerCase();
     const filteredProducts = products.filter(product => {
       return (
         product.title.toLowerCase().includes(searchTerm) ||
         product.description.toLowerCase().includes(searchTerm)
       );
     });
-    // Monta o HTML dos produtos filtrados
-    const productCardsHTML = filteredProducts.map(productCardTemplate).join("");
-    const searchResultContainer = document.querySelector(".search-result"); // Container do resultado da pesquisa
-    // Se o container do resultado da pesquisa estiver vazio, mostre a mensagem "Produto não encontrado"
-    if (filteredProducts.length === 0) {
-      searchResultContainer.innerHTML = `<h3 class="not-found text-danger" style="text-align: center;">Produto não encontrado</h3>`;
-    // Se o container do resultado da pesquisa não estiver vazio, mostre o resultado da pesquisa
-    } else {
-      searchResultContainer.innerHTML = productCardsHTML;
-    }
+
+    // Armazena os produtos filtrados em sessionStorage
+    sessionStorage.setItem("filteredProducts", JSON.stringify(filteredProducts));
+
+    // Redireciona para a página de resultado de pesquisa
+    window.location.href = '../search.html';
   });
 });
+
+// Na página de resultado de pesquisa
+document.addEventListener("DOMContentLoaded", () => {
+  displaySearchResults(); // Ao carregador o documento, executa a função displaySearchResults
+});
+// Função displaySearchResults: Serve para apresentar o resultado da pesquisa
+function displaySearchResults() {
+  const searchResultContainer = document.querySelector(".search-result"); // Container do resultado da pesquisa
+  const filteredProducts = JSON.parse(sessionStorage.getItem("filteredProducts")); // Pega os produtos filtrados que foram armazenados
+  // Se o produto não for encontrado, apresente a mensagem "Produto não encontrado"
+  if (filteredProducts.length === 0) {
+    searchResultContainer.innerHTML = `<h3 class="not-found text-danger" style="text-align: center;">Produto não encontrado</h3>`;
+    // Se o produto for encontrado, apresente-o
+  } else {
+    const productCardsHTML = filteredProducts.map(productCardTemplate).join("");
+    searchResultContainer.innerHTML = productCardsHTML;
+  }
+}
