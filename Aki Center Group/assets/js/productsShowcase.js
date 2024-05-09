@@ -11,7 +11,7 @@ const products = [
     category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
-    sales: 10,
+    sales: 13,
     releaseDate: new Date(2023, 8, 29)
   },
   // Netflix: Plano Solo
@@ -166,7 +166,8 @@ const productCardTemplate = (product) => {
     `;
 };
 // 3 - Funções para gerar os produtos
-// 3.1 - Recomendados
+// 3.1 - Páginas distintas
+// 3.1.1 - Recomendados
 const generateRecommendedProducts = () => {
   const recommendedProducts = products.filter(product => product.rating >= 4);
   const productCardsHTML = recommendedProducts.map(productCardTemplate).join("");
@@ -175,7 +176,7 @@ const generateRecommendedProducts = () => {
 document.addEventListener("DOMContentLoaded", () => {
   generateRecommendedProducts();
 });
-// 3.2 - Mais vendidos
+// 3.1.2 - Mais vendidos
 const generateBestSellingProducts = () => {
   // Filtro: 10 vendas para cima | Ordem: Decrescente
   const bestSellingProducts = products.filter(product => product.sales >= 10).sort((a, b) => b.sales - a.sales);
@@ -185,7 +186,7 @@ const generateBestSellingProducts = () => {
 document.addEventListener("DOMContentLoaded", () => {
   generateBestSellingProducts();
 });
-// 3.3 - Mais recentes
+// 3.1.3 - Mais recentes
 const generateMostRecentProducts = () => {
   // Ordenar por lançamento. Trocar o "a" pelo "b" para inverter a ordem
   const mostRecentProducts = products.sort((a, b) => b.releaseDate - a.releaseDate);
@@ -194,6 +195,40 @@ const generateMostRecentProducts = () => {
 };
 document.addEventListener("DOMContentLoaded", () => {
   generateMostRecentProducts();
+});
+// 3.2 - Home page (Apenas 4 produtos de cada categoria)
+// 3.2.1 - Recomendados
+const RATING_THRESHOLD = 4; // Limite mínimo de avaliação dos produtos
+const MAX_RECOMMENDED_PRODUCTS = 4; // Recomendação máxima de produtos de cada categoria
+
+const generateRecommendedProductsHome = () => {
+  const topRatedProducts = products.filter(product => product.rating >= RATING_THRESHOLD); // Produtos mais bem avaliados
+  const recommendedProducts = topRatedProducts.slice(0, MAX_RECOMMENDED_PRODUCTS); // Os 4 produtos mais bem avaliados
+  const productCardsHTML = recommendedProducts.map(productCardTemplate).join("");
+  document.querySelector(".recommended-products-home").innerHTML = productCardsHTML;
+};
+document.addEventListener("DOMContentLoaded", () => {
+  generateRecommendedProductsHome();
+});
+// 3.2.2 - Novidades
+const generateMostRecentProductsHome = () => {
+  const topRecentProducts = products.sort((a, b) => b.releaseDate - a.releaseDate); // Produtos mais recentes
+  const mostRecentProducts = topRecentProducts.slice(0, MAX_RECOMMENDED_PRODUCTS); // Os 4 produtos mais recentes
+  const productCardsHTML = mostRecentProducts.map(productCardTemplate).join("");
+  document.querySelector(".most-recent-products-home").innerHTML = productCardsHTML;
+};
+document.addEventListener("DOMContentLoaded", () => {
+  generateMostRecentProductsHome();
+});
+// 3.2.3 - Mais vendidos
+const generateBestSellingProductsHome = () => {
+  const topSellingProducts = products.filter(product => product.sales >= 10).sort((a, b) => b.sales - a.sales); // Produtos mais vendidos
+  const bestSellingProducts = topSellingProducts.slice(0, MAX_RECOMMENDED_PRODUCTS); // Os 4 produtos mais bem vendidos
+  const productCardsHTML = bestSellingProducts.map(productCardTemplate).join("");
+  document.querySelector(".best-selling-products-home").innerHTML = productCardsHTML;
+};
+document.addEventListener("DOMContentLoaded", () => {
+  generateBestSellingProductsHome();
 });
 //4 - Pesquisa de produtos
 // 4.1 - Na página de pesquisa de produtos
@@ -218,7 +253,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = '../search.html';
   });
 });
-
 // Na página de resultado de pesquisa
 document.addEventListener("DOMContentLoaded", () => {
   displaySearchResults(); // Ao carregador o documento, executa a função displaySearchResults
@@ -229,7 +263,7 @@ function displaySearchResults() {
   const filteredProducts = JSON.parse(sessionStorage.getItem("filteredProducts")); // Pega os produtos filtrados que foram armazenados
   // Se o produto não for encontrado, apresente a mensagem "Produto não encontrado"
   if (filteredProducts.length === 0) {
-    searchResultContainer.innerHTML = `<h3 class="not-found text-danger" style="text-align: center;">Produto não encontrado</h3>`;
+    searchResultContainer.innerHTML = `<h3 class="not-found text-danger" style="text-align: center; height: 50vh;">Produto não encontrado</h3>`;
     // Se o produto for encontrado, apresente-o
   } else {
     const productCardsHTML = filteredProducts.map(productCardTemplate).join("");
