@@ -158,8 +158,20 @@ const productCardTemplate = (product) => {
             <p class="card-text">Kz${product.price}</p>
             <div class="card-actions">
               <a href="" class="btn btn-primary">Obter agora</a>
-              <button class="btn product-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+              <button class="btn product-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-start cart-display" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+          <h5 class="offcanvas-title cart-display-header" id="offcanvasExampleLabel">Carrinho</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+        <div class="offcanvas-body">
+          <div>
+          Gerencie os seus produtos com facilidade dentro do seu carrinho.
           </div>
         </div>
       </div>
