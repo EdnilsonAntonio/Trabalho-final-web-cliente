@@ -1,6 +1,7 @@
 // Script de produtos: Este script tem como objetivo fazer com que os produtos apareçam de maneira dinâmica sem precisar de HTML
 
-// 1 - Lista de produtos
+// 1 - Listas
+// 1.1 - Produtos
 const products = [
   // EA SPORTS FC 24
   {
@@ -20,7 +21,7 @@ const products = [
     title: "Netflix: Plano Solo",
     image: "/assets/img/cards/netflix.jpeg",
     price: "4.250 p/mês",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
     sales: 40,
@@ -32,7 +33,7 @@ const products = [
     title: "Netflix: Plano Kamba",
     image: "/assets/img/cards/netflix.jpeg",
     price: "6.500 p/mês",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
     sales: 15,
@@ -44,7 +45,7 @@ const products = [
     title: "Prime Video: Plano d'Ouro",
     image: "/assets/img/cards/prime video.png",
     price: "6.500 p/mês",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -56,7 +57,7 @@ const products = [
     title: "Call Of Duty: Modern Warfare III",
     image: "/assets/img/cards/cod mw3.jpg",
     price: "45.000",
-    Category: "Gaming",
+    category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -68,7 +69,7 @@ const products = [
     title: "Prime Video: Plano Diamante",
     image: "/assets/img/cards/prime video.png",
     price: "60.000 p/ano",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -80,7 +81,7 @@ const products = [
     title: "HBO Max: Plano d'Ouro",
     image: "/assets/img/cards/hbomax.jpg",
     price: "12.000 p/mês",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -92,7 +93,7 @@ const products = [
     title: "Spotify: Plano Individual",
     image: "/assets/img/cards/spotify.jpeg",
     price: "9.500 p/mês",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -104,7 +105,7 @@ const products = [
     title: "HBO Max: Plano d'Ouro",
     image: "/assets/img/cards/hbomax.jpg",
     price: "68.000 p/ano",
-    Category: "Streaming",
+    category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -116,7 +117,7 @@ const products = [
     title: "eFootball: Bluelock",
     image: "/assets/img/cards/efootball bluelock.jpg",
     price: "45.000",
-    Category: "Gaming",
+    category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -128,7 +129,7 @@ const products = [
     title: "MLB 24",
     image: "/assets/img/cards/mlb24.jpg",
     price: "45.000",
-    Category: "Gaming",
+    category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
@@ -140,43 +141,34 @@ const products = [
     title: "Rise of the ronin",
     image: "/assets/img/cards/rise of the ronin.jpg",
     price: "45.000",
-    Category: "Gaming",
+    category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
     sales: 10,
     releaseDate: new Date(2024, 2, 22)
   },
 ];
+// 1.2 - Carrinho
+let cart = [];
 // 2 - Template do produto
 const productCardTemplate = (product) => {
   return `
-      <div class="col-lg-3 col-md-6 col-sm-12 card-container">
-        <div class="card product-card">
-          <img src="${product.image}" class="card-img-top" alt="${product.title}">
-          <div class="card-body">
-            <h5 class="card-title">${product.title}</h5>
-            <p class="card-text">Kz${product.price}</p>
-            <div class="card-actions">
-              <a href="" class="btn btn-primary">Obter agora</a>
-              <button class="btn product-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-            </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 card-container" data-id="${product.id}">
+      <div class="card product-card">
+        <img src="${product.image}" class="card-img-top" alt="${product.title}">
+        <div class="card-body">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">Kz${product.price}</p>
+          <div class="card-actions">
+            <a href="" class="btn btn-primary">Obter agora</a>
+            <button class="btn add-to-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
-
-      <div class="offcanvas offcanvas-start cart-display" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-header">
-          <h5 class="offcanvas-title cart-display-header" id="offcanvasExampleLabel">Carrinho</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-        <div class="offcanvas-body">
-          <div>
-          Gerencie os seus produtos com facilidade dentro do seu carrinho.
-          </div>
-        </div>
-      </div>
-    `;
+    </div>
+  `;
 };
+
 // 3 - Funções para gerar os produtos
 // 3.1 - Páginas distintas
 // 3.1.1 - Recomendados
@@ -265,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = '../search.html';
   });
 });
-// Na página de resultado de pesquisa
+// 4.2 - Na página de resultado de pesquisa
 document.addEventListener("DOMContentLoaded", () => {
   displaySearchResults(); // Ao carregador o documento, executa a função displaySearchResults
 });
@@ -282,3 +274,78 @@ function displaySearchResults() {
     searchResultContainer.innerHTML = productCardsHTML;
   }
 }
+// 5 - Carrinho
+const addToCart = (productId) => {
+  const product = products.find(p => p.id === productId);
+  const cartItem = cart.find(item => item.id === productId);
+  if (cartItem) {
+    cartItem.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+  renderCart();
+};
+
+const renderCart = () => {
+  const cartItemsContainer = document.querySelector('.cartList');
+  cartItemsContainer.innerHTML = '';
+
+  cart.forEach(item => {
+    const cartItemElement = document.createElement('div');
+    cartItemElement.classList.add('cart-item');
+    cartItemElement.innerHTML = `
+      <div class="item mb-3">
+        <div class="image">
+          <img src="${item.image}" alt="${item.title}">
+        </div>
+        <div class="name">
+          <p>${item.title}</p>
+        </div>
+        <div class="totalPrice">
+          <p>Kz${item.price}</p>
+        </div>
+        <div class="quantity">
+          <span class="minus" data-id="${item.id}">-</span>
+          <span>${item.quantity}</span>
+          <span class="plus" data-id="${item.id}">+</span>
+        </div>
+      </div>
+    `;
+    cartItemsContainer.appendChild(cartItemElement);
+  });
+
+  document.querySelectorAll('.minus').forEach(button => {
+    button.addEventListener('click', () => updateQuantity(button.dataset.id, 'decrease'));
+  });
+  document.querySelectorAll('.plus').forEach(button => {
+    button.addEventListener('click', () => updateQuantity(button.dataset.id, 'increase'));
+  });
+};
+
+const updateQuantity = (productId, action) => {
+  const cartItem = cart.find(item => item.id == productId);
+  if (action === 'increase') {
+    cartItem.quantity += 1;
+  } else if (action === 'decrease') {
+    cartItem.quantity -= 1;
+    if (cartItem.quantity <= 0) {
+      cart = cart.filter(item => item.id != productId);
+    }
+  }
+  renderCart();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", (e) => {
+    if (e.target.classList.contains("add-to-cart")) {
+      e.preventDefault();
+      const productElement = e.target.closest(".card-container");
+      const productId = Number(productElement.dataset.id);
+      addToCart(productId);
+    }
+  });
+
+  generateRecommendedProductsHome();
+  generateMostRecentProductsHome();
+  generateBestSellingProductsHome();
+});

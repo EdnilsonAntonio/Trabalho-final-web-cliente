@@ -60,9 +60,12 @@
               <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="search"> <!--Barra de pesquisa-->
               <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> <!--Botão de pesquisa-->
               <!--Carrinho de compras-->
-              <a href="" class="btn">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              </a>
+              <div class="cart-group">
+                <a class="btn main-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> <!--Carrinho-->
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> <!--Contador-->
+                </a>
+                <span class="cart-count" id="cart-count">0</span>
+              </div>
             </form>
           </div>
         </div>
@@ -70,6 +73,19 @@
     </header>
     <!--Main-->
     <main id="main">
+      <!-- Offcanvas do Carrinho -->
+      <div class="offcanvas offcanvas-end cart-display" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title cart-display-header" id="offcanvasExampleLabel">Carrinho</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="listCart mt-3 cartList"></div>
+          <div class="checkout-button-container">
+            <button class="btn btn-primary checkout">Finalizar compra</button>
+          </div>
+        </div>
+      </div>
       <!--Recomendado para si-->
       <section id="search-result">
         <!--Título-->
