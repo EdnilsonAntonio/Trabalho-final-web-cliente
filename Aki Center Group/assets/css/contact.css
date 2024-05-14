@@ -81,6 +81,19 @@ body {
 .offcanvas-body {
     padding: 1px;
 }
+.cartDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+.total-price {
+    margin: 0;
+    font-weight: bold;
+}
+.empty-cart {
+    padding: 0;
+}
 /* 1.7.2.1 - Lista de produtos*/
 .listCart {
     display: flex;

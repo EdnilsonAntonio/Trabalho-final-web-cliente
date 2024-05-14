@@ -275,21 +275,26 @@ function displaySearchResults() {
   }
 }
 // 5 - Carrinho
+// 5.1 - Adicionar produto ao carrinho
 const addToCart = (productId) => {
+  // Procura o produto no array de produtos pelo ID
   const product = products.find(p => p.id === productId);
   const cartItem = cart.find(item => item.id === productId);
+  // Se o produto já estiver no carrinho, incremente a quantidade
   if (cartItem) {
     cartItem.quantity += 1;
+  // Se o produto não estiver no carrinho, adicione-o
   } else {
     cart.push({ ...product, quantity: 1 });
   }
   renderCart();
 };
-
+// 5.2 - Renderizar carrinho
 const renderCart = () => {
-  const cartItemsContainer = document.querySelector('.cartList');
+  const cartItemsContainer = document.querySelector('.cartList'); // Container dos itens do carrinho
   cartItemsContainer.innerHTML = '';
-
+  let totalPrice = 0; // Inicializamos a variável totalPrice em 0
+  // Para cada item, faça:
   cart.forEach(item => {
     const cartItemElement = document.createElement('div');
     cartItemElement.classList.add('cart-item');
@@ -311,30 +316,39 @@ const renderCart = () => {
         </div>
       </div>
     `;
-    cartItemsContainer.appendChild(cartItemElement);
-  });
+    cartItemsContainer.appendChild(cartItemElement); // Adiciona o item no container
 
+    // Atualizamos o totalPrice com o preço do item atual
+    totalPrice += item.price * item.quantity
+  });
+  // Exibimos o preço total no carrinho
+  document.querySelector('.total-price').textContent = `Total: Kz${totalPrice}`;
+
+  // Ação de diminuir quantidade do item
   document.querySelectorAll('.minus').forEach(button => {
     button.addEventListener('click', () => updateQuantity(button.dataset.id, 'decrease'));
   });
+  // Ação de aumentar quantidade do item
   document.querySelectorAll('.plus').forEach(button => {
     button.addEventListener('click', () => updateQuantity(button.dataset.id, 'increase'));
   });
 };
-
+// 5.3 - Atualiza a quantidade de produtos no carrinho
 const updateQuantity = (productId, action) => {
   const cartItem = cart.find(item => item.id == productId);
+  // Se a ação for aumentar a quantidade, incremente a quantidade do item
   if (action === 'increase') {
     cartItem.quantity += 1;
+  // Se a ação for diminuir a quantidade, decremente a quantidade do item
   } else if (action === 'decrease') {
     cartItem.quantity -= 1;
+    // Se a quantidade do item for igual a 0, remova o item do carrinho
     if (cartItem.quantity <= 0) {
       cart = cart.filter(item => item.id != productId);
     }
   }
-  renderCart();
+  renderCart(); // Renderiza o carrinho atualizado
 };
-
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {
     if (e.target.classList.contains("add-to-cart")) {
