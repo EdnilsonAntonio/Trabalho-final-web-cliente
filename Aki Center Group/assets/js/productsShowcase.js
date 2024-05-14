@@ -8,7 +8,7 @@ const products = [
     id: 1,
     title: "EA SPORTS FC 24",
     image: "/assets/img/cards/ea sports fc 24.jpg",
-    price: "36.000",
+    price: 36000,
     category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
@@ -20,7 +20,7 @@ const products = [
     id: 2,
     title: "Netflix: Plano Solo",
     image: "/assets/img/cards/netflix.jpeg",
-    price: "4.250 p/mês",
+    price: 4250,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
@@ -32,7 +32,7 @@ const products = [
     id: 3,
     title: "Netflix: Plano Kamba",
     image: "/assets/img/cards/netflix.jpeg",
-    price: "6.500 p/mês",
+    price: 6500,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 5.0,
@@ -44,7 +44,7 @@ const products = [
     id: 4,
     title: "Prime Video: Plano d'Ouro",
     image: "/assets/img/cards/prime video.png",
-    price: "6.500 p/mês",
+    price: 6500,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -56,7 +56,7 @@ const products = [
     id: 5,
     title: "Call Of Duty: Modern Warfare III",
     image: "/assets/img/cards/cod mw3.jpg",
-    price: "45.000",
+    price: 45000,
     category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -68,7 +68,7 @@ const products = [
     id: 6,
     title: "Prime Video: Plano Diamante",
     image: "/assets/img/cards/prime video.png",
-    price: "60.000 p/ano",
+    price: 60000,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -80,7 +80,7 @@ const products = [
     id: 7,
     title: "HBO Max: Plano d'Ouro",
     image: "/assets/img/cards/hbomax.jpg",
-    price: "12.000 p/mês",
+    price: 12000,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -92,7 +92,7 @@ const products = [
     id: 8,
     title: "Spotify: Plano Individual",
     image: "/assets/img/cards/spotify.jpeg",
-    price: "9.500 p/mês",
+    price: 9500,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -104,7 +104,7 @@ const products = [
     id: 9,
     title: "HBO Max: Plano d'Ouro",
     image: "/assets/img/cards/hbomax.jpg",
-    price: "68.000 p/ano",
+    price: 68000,
     category: "Streaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -116,7 +116,7 @@ const products = [
     id: 10,
     title: "eFootball: Bluelock",
     image: "/assets/img/cards/efootball bluelock.jpg",
-    price: "45.000",
+    price: 45000,
     category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -128,7 +128,7 @@ const products = [
     id: 11,
     title: "MLB 24",
     image: "/assets/img/cards/mlb24.jpg",
-    price: "45.000",
+    price: 45000,
     category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -140,7 +140,7 @@ const products = [
     id: 12,
     title: "Rise of the ronin",
     image: "/assets/img/cards/rise of the ronin.jpg",
-    price: "45.000",
+    price: 45000,
     category: "Gaming",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     rating: 4.0,
@@ -161,7 +161,7 @@ const productCardTemplate = (product) => {
           <p class="card-text">Kz${product.price}</p>
           <div class="card-actions">
             <a href="" class="btn btn-primary">Obter agora</a>
-            <button class="btn add-to-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="btn add-to-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="fa fa-shopping-cart add-to-cart" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -302,7 +302,7 @@ const renderCart = () => {
           <p>${item.title}</p>
         </div>
         <div class="totalPrice">
-          <p>Kz${item.price}</p>
+          <p>Kz${item.price * item.quantity}</p>
         </div>
         <div class="quantity">
           <span class="minus" data-id="${item.id}">-</span>
