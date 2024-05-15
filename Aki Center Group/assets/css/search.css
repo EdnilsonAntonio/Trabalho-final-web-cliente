@@ -95,6 +95,20 @@ body {
 .empty-cart {
     padding: 0;
 }
+#voidcart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+#voidcart .fa-shopping-cart {
+    font-size: 50px;
+    color: #1786F9;
+}
+#voidcart p {
+    font-weight:700
+}
 /* 1.7.2.1 - Lista de produtos*/
 .listCart {
     display: flex;

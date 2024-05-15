@@ -149,7 +149,8 @@ const products = [
   },
 ];
 // 1.2 - Carrinho
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
 // 2 - Template do produto
 const productCardTemplate = (product) => {
   return `
@@ -168,6 +169,7 @@ const productCardTemplate = (product) => {
     </div>
   `;
 };
+
 // 3 - Funções para gerar os produtos
 // 3.1 - Páginas distintas
 // 3.1.1 - Recomendados
@@ -233,6 +235,7 @@ const generateBestSellingProductsHome = () => {
 document.addEventListener("DOMContentLoaded", () => {
   generateBestSellingProductsHome();
 });
+
 //4 - Pesquisa de produtos
 // 4.1 - Na página de pesquisa de produtos
 document.addEventListener("DOMContentLoaded", () => {
@@ -248,10 +251,8 @@ document.addEventListener("DOMContentLoaded", () => {
         product.description.toLowerCase().includes(searchTerm)
       );
     });
-
     // Armazena os produtos filtrados em sessionStorage
     sessionStorage.setItem("filteredProducts", JSON.stringify(filteredProducts));
-
     // Redireciona para a página de resultado de pesquisa
     window.location.href = '../search.html';
   });
@@ -273,6 +274,7 @@ function displaySearchResults() {
     searchResultContainer.innerHTML = productCardsHTML;
   }
 }
+
 // 5 - Carrinho
 // 5.1 - Adicionar produto ao carrinho
 const addToCart = (productId) => {
@@ -286,10 +288,19 @@ const addToCart = (productId) => {
   } else {
     cart.push({ ...product, quantity: 1 });
   }
-  renderCart();
+  saveCart(); // Salva o carrinho
+  renderCart(); // Renderiza o carrinho
 };
 // 5.2 - Renderizar carrinho
 const renderCart = () => {
+  const voidcart = document.getElementById('voidcart') // Mensagem de carrinho vazio
+  // Se o carrinho não estiver vazio
+  if (cart.length > 0) {
+    voidcart.style.display = 'none' // A mensagem de carrinho vazio desaparece
+  }
+  else {
+    voidcart.style.display = 'flex' // A mensagem de carrinho vazio aparece
+  }
   const cartItemsContainer = document.querySelector('.cartList'); // Container dos itens do carrinho
   cartItemsContainer.innerHTML = '';
   let totalPrice = 0; // Inicializamos a variável totalPrice em 0
@@ -316,69 +327,71 @@ const renderCart = () => {
       </div>
     `;
     cartItemsContainer.appendChild(cartItemElement); // Adiciona o item no container
-
     // Atualizamos o totalPrice com o preço do item atual
     totalPrice += item.price * item.quantity
   });
   // Exibimos o preço total no carrinho
   document.querySelector('.total-price').textContent = `Total: Kz${totalPrice}`;
-
   // Atualiza o contador do carrinho
   updateCartCount();
-
   // Ação de diminuir quantidade do item
   document.querySelectorAll('.minus').forEach(button => {
-    button.addEventListener('click', () => updateQuantity(button.dataset.id, 'decrease'));
+    button.addEventListener('click', (event) => {
+      const productId = parseInt(event.target.dataset.id);
+      updateItemQuantity(productId, -1);
+    });
   });
   // Ação de aumentar quantidade do item
   document.querySelectorAll('.plus').forEach(button => {
-    button.addEventListener('click', () => updateQuantity(button.dataset.id, 'increase'));
+    button.addEventListener('click', (event) => {
+      const productId = parseInt(event.target.dataset.id);
+      updateItemQuantity(productId, 1);
+    });
   });
-};
-// 5.3 - Atualiza a quantidade de produtos no carrinho
-const updateQuantity = (productId, action) => {
-  const cartItem = cart.find(item => item.id == productId);
-  // Se a ação for aumentar a quantidade, incremente a quantidade do item
-  if (action === 'increase') {
-    cartItem.quantity += 1;
-  // Se a ação for diminuir a quantidade, decremente a quantidade do item
-  } else if (action === 'decrease') {
-    cartItem.quantity -= 1;
-    // Se a quantidade do item for igual a 0, remova o item do carrinho
-    if (cartItem.quantity <= 0) {
-      cart = cart.filter(item => item.id != productId);
-    }
-  }
-  renderCart(); // Renderiza o carrinho atualizado
-};
-// 5.4 - Atualizar contador do carrinho
-const updateCartCount = () => {
-  const cartCount = document.querySelector('#cart-count');
-  cartCount.textContent = cart.length;
 };
 // 5.4 - Esvaziar carrinho
-const emptyCartBtn = document.querySelector('.empty-cart');
+const emptyCartBtn = document.querySelector('.empty-cart'); // Botão de esvaziar carrinho
 emptyCartBtn.addEventListener('click', ()=> {
-  emptyCartBtn.addEventListener('click', () => {
-    emptyCart();
-  });
+  emptyCart();
 });
-const emptyCart = () => {
-  cart = [];
+// Função emptyCart: Serve para esvaziar o carrinho
+function emptyCart() {
+  cart = []; // Esvazia o carrinho
+  saveCart(); // Salva o carrinho
+  renderCart(); // Renderiza o carrinho
+  updateCartCount(); // Atualiza o contador do carrinho
+}
+// 5.3 - Atualizar quantidade do item no carrinho
+const updateItemQuantity = (productId, quantityChange) => {
+  const cartItem = cart.find(item => item.id === productId);
+  if (cartItem) {
+    cartItem.quantity += quantityChange;
+    if (cartItem.quantity <= 0) {
+      cart = cart.filter(item => item.id !== productId); // Remove o item do carrinho se a quantidade for 0 ou negativa
+    }
+  }
+  saveCart();
   renderCart();
 };
-// 5.5 - Remover produto do carrinho
+// 5.4 - Salvar o carrinho no localStorage
+const saveCart = () => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
+// 5.5 - Atualizar contador do carrinho
+const updateCartCount = () => {
+  const cartCountElement = document.querySelector('.cart-count');
+  const totalCount = cart.reduce((count, item) => count + item.quantity, 0);
+  cartCountElement.textContent = totalCount;
+};
+// 5.6 - Carregar o estado inicial do carrinho ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.addEventListener("click", (e) => {
-    if (e.target.classList.contains("add-to-cart")) {
-      e.preventDefault();
-      const productElement = e.target.closest(".card-container");
-      const productId = Number(productElement.dataset.id);
-      addToCart(productId);
-    }
-  });
-
-  generateRecommendedProductsHome();
-  generateMostRecentProductsHome();
-  generateBestSellingProductsHome();
+  renderCart();
+});
+// 5.7 - Event listener para os botões de adicionar ao carrinho
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('add-to-cart')) {
+    const cardContainer = event.target.closest('.card-container');
+    const productId = parseInt(cardContainer.dataset.id);
+    addToCart(productId);
+  }
 });
