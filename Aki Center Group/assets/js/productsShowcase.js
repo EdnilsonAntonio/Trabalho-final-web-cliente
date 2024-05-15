@@ -168,7 +168,6 @@ const productCardTemplate = (product) => {
     </div>
   `;
 };
-
 // 3 - Funções para gerar os produtos
 // 3.1 - Páginas distintas
 // 3.1.1 - Recomendados
@@ -324,6 +323,9 @@ const renderCart = () => {
   // Exibimos o preço total no carrinho
   document.querySelector('.total-price').textContent = `Total: Kz${totalPrice}`;
 
+  // Atualiza o contador do carrinho
+  updateCartCount();
+
   // Ação de diminuir quantidade do item
   document.querySelectorAll('.minus').forEach(button => {
     button.addEventListener('click', () => updateQuantity(button.dataset.id, 'decrease'));
@@ -348,6 +350,11 @@ const updateQuantity = (productId, action) => {
     }
   }
   renderCart(); // Renderiza o carrinho atualizado
+};
+// 5.4 - Atualizar contador do carrinho
+const updateCartCount = () => {
+  const cartCount = document.querySelector('#cart-count');
+  cartCount.textContent = cart.length;
 };
 // 5.4 - Esvaziar carrinho
 const emptyCartBtn = document.querySelector('.empty-cart');
