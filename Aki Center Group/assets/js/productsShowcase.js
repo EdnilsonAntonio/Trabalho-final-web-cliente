@@ -349,6 +349,18 @@ const updateQuantity = (productId, action) => {
   }
   renderCart(); // Renderiza o carrinho atualizado
 };
+// 5.4 - Esvaziar carrinho
+const emptyCartBtn = document.querySelector('.empty-cart');
+emptyCartBtn.addEventListener('click', ()=> {
+  emptyCartBtn.addEventListener('click', () => {
+    emptyCart();
+  });
+});
+const emptyCart = () => {
+  cart = [];
+  renderCart();
+};
+// 5.5 - Remover produto do carrinho
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {
     if (e.target.classList.contains("add-to-cart")) {
