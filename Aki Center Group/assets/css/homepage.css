@@ -68,6 +68,17 @@ body {
     top: 50%;
     right: 10px;
 }
+/* Revelar conteúdo ao rolar*/
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.reveal-now {
+    transform: translateY(0px);
+    opacity: 1;
+}
 /* 1.7 - Janela do carrinho*/
 /* 1.7.1 - Cabeçalho da janela*/
 .offcanvas-header {
