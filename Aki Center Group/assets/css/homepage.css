@@ -228,6 +228,9 @@ body {
     color: white;
     border-color: #F1F1F1;
 }
+.cta-reveal {
+    display: none;
+}
 /*3 - Categorias*/
 /*3.1 - Containers*/
 #categories {
@@ -406,6 +409,20 @@ body {
     }
     .carousel-item a {
         pointer-events:visible;
+    }
+    /* Revelar conteúdo*/
+    .stay {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .cta-reveal .cta-title {
+        text-align: center;
+        font-weight: 700;
+        color: #1786F9;
+    }
+    .leave {
+        display: none !important;
     }
     /*2 - Secções*/
     .section-title {

@@ -4,6 +4,7 @@ window.addEventListener('scroll', reveal)
 
 function reveal() {
     var reveals = document.querySelectorAll('.reveal');
+    var ctaReveal = document.querySelectorAll('.cta-reveal')
 
     for (var i = 0; i < reveals.length; i++) {
 
@@ -13,6 +14,8 @@ function reveal() {
 
         if (revealtop < windowheight - revealpoint) {
             reveals[i].classList.add('reveal-now');
+            ctaReveal[0].classList.add('leave');
+            
         }
         else {
             reveals[i].classList.remove('reveal-now');
