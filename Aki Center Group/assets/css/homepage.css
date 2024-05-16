@@ -394,6 +394,10 @@ body {
 }
 /*Responsividade: Telemóvel*/
 @media screen and (max-width: 767px) {
+    /* Contador do carrinho*/
+    .cart-count {
+        top: 90%;
+    }
     /*1 - Carrousel*/
     .carousel-item img {
         width: 100%;
