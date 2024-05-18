@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/brand/logotipo.png" type="image/x-icon">
+    <title>Contacte-nos</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/contact.css" />
+    <!--Fontsawesome-->
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header id="header">
+      <!--Classe navbar do Bootstrap-->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html"><img src="/assets/img/brand/logotipo.png" alt="Aki Center Group" id="logotipo-navbar"></a>
+          <!--Toggler de expansão para dispositivos móveis-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Lista de links da navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/most-sold.html">Mais vendidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/news.html">Novidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pré-reserva</a>
+              </li>
+              <!--Link dropdown-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <!--Menu do link dropdown-->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Streaming</a></li>
+                  <li><a class="dropdown-item" href="#">Gaming</a></li>
+                  <li><a class="dropdown-item" href="#">Soluções financeiras</a></li>
+                  <li><a class="dropdown-item" href="#">Marketing</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Pesquisar manualmente</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Formulário de pesquisa-->
+            <form id="search-form" class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="search"> <!--Barra de pesquisa-->
+              <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> <!--Botão de pesquisa-->
+              <!--Carrinho de compras-->
+              <div class="cart-group">
+                <a class="btn main-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> <!--Carrinho-->
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> <!--Contador-->
+                </a>
+                <span class="cart-count" id="cart-count">0</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main-->
+    <main id="main">
+      <!-- Offcanvas do Carrinho -->
+      <div class="offcanvas offcanvas-end cart-display" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title cart-display-header" id="offcanvasExampleLabel">Carrinho</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="cartDetails">
+          <h6 class="total-price">Total: Kz</h6>
+          <button class="btn empty-cart">Esvaziar carrinho</button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="listCart mt-3 cartList"></div>
+          <div id="voidcart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <p>Seu carrinho está vazio</p>
+          </div>
+          <div class="checkout-button-container">
+            <button class="btn btn-primary checkout">Finalizar compra</button>
+          </div>
+        </div>
+      </div>
+      <!--Contacto-->
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <!--Grupo de texto-->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="contact-text">
+                <h1 class="contact-title">Contacte-nos</h1>
+                <p class="contact-text">
+                  Entre em contacto connosco e seja respondido em até 48h.
+                </p>
+                <h3 class="contact-subtitle">Horas de contacto (África central)</h3>
+                <p class="contact-text">Segunda à Sábado: 13:00h - 19:00h<br>Domingos: Fechados</p>
+                <h3 class="contact-subtitle">Meios de suporte</h3>
+                <p class="contact-text">WhatsApp: +244 943 060 625<br>E-mail: suporte.akicentergroup@gmail.com</p>
+              </div>
+            </div>
+            <!--Formulário-->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <form id="form" action="">
+                <div class="container">
+                  <!--Campos-->
+                  <div class="row">
+                    <!--Nome-->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <input required type="text" class="form-control" id="floatingInput" placeholder="Nome">
+                        <label for="floatingInput">Nome</label>
+                      </div>
+                    </div>
+                    <!--Sobrenome-->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Sobrenome">
+                        <label for="floatingInput">Sobrenome</label>
+                      </div>
+                    </div>
+                    <!--E-mail-->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <input required type="email" class="form-control" id="floatingInput" placeholder="E-mail">
+                        <label for="floatingInput">E-mail</label>
+                        <div id="emailHelp" class="form-text">Nunca compartilharemos o seu e-mail com mais ninguém.</div>
+                      </div>
+                    </div>
+                    <!--Tratamento-->
+                    <div class="col-lg-6 col-md-g col-sm-12 mb-3">
+                      <select class="form-select treatment" aria-label="Default select example">
+                        <option selected>Tratamento</option>
+                        <option value="1">Senhor (Sr.)</option>
+                        <option value="2">Senhora (Sra.)</option>
+                      </select>
+                    </div>
+                    <!--Assunto-->
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-3">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Assunto</option>
+                        <option value="1">Feedback</option>
+                        <option value="2">Sugestão</option>
+                        <option value="3">Reclamação</option>
+                      </select>
+                      <div id="subjectHelp" class="form-text">Selecione um assunto para ser respondido mais rápido.</div>
+                    </div>
+                    <!--Mensagem-->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <!--Campo-->
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Mensagem" style="height: 100px" required></textarea>
+                        <label for="floatingTextarea">Mensagem</label>
+                      </div>
+                    </div>
+                    <!--Botão-->
+                    <div class="col-lg-12 col-md-12 col-sm-12 submit-btn">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                  </div>
+                  <!--Fim campos-->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Rodapé-->
+    <footer id="footer">
+      <!--Cabeçalho-->
+      <div class="footer-logo-container"><img src="/assets/img/brand/logotipo.png" alt="" class="footer-logo"></div>
+      <!--Conteúdo-->
+      <div class="container">
+        <!--Conjunto de colunas-->
+        <div class="row footer-content">
+          <!--Coluna 1-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Links úteis</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item"><a href="" class="footer-list-link">Termos de utilização do site</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Mapa do site</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Perguntas frequentes</a></li>
+              <li class="footer-list-item"><a href="https://github.com/EdnilsonAntonio/Trabalho-final-web-cliente/tree/master" class="footer-list-link">Drive</a></li>
+            </ul>
+          </div>
+          <!--Coluna 2-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Redes sociais</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item"><a href="" class="footer-list-link">Facebook</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Instagram</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">WhatsApp</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">X</a></li>
+            </ul>
+          </div>
+          <!--Coluna 3-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Fale connosco</h4>
+            <p class="footer-text">Preencha um breve formulário e será respondido em até 48h.</p>
+            <a href="/contact.html" class="btn btn-primary footer-btn">Falar agora</a>
+          </div>
+        </div>
+        <!--Fim conjunto de colunas-->
+      </div>
+      <!--Rodapé-->
+      <p class="copyright">© 2024 Aki Center Group, Ednilson António. Todos os direitos reservados.</p>
+    </footer>
+    <!--Botão flutuante-->
+    <button id="top-btn" class="btn" onclick="scrollBody(), toTheTop()">
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <!--Bootstrap-->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!--JavaScript-->
+    <script src="/assets/js/generalScripts.js"></script>
+    <script src="/assets/js/productsShowcase.js"></script>
+  </body>
+</html>

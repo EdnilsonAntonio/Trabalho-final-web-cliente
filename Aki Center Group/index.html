@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/brand/logotipo.png" type="image/x-icon">
+    <title>Home page - Seja bem-vindo à Aki Center Group</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/homepage.css" />
+    <!--Fontsawesome-->
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header id="header">
+      <!--Classe navbar do Bootstrap-->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html"><img src="/assets/img/brand/logotipo.png" alt="Aki Center Group" id="logotipo-navbar"></a>
+          <!--Toggler de expansão para dispositivos móveis-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Lista de links da navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/most-sold.html">Mais vendidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/news.html">Novidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pré-reserva</a>
+              </li>
+              <!--Link dropdown-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <!--Menu do link dropdown-->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Streaming</a></li>
+                  <li><a class="dropdown-item" href="#">Gaming</a></li>
+                  <li><a class="dropdown-item" href="#">Soluções financeiras</a></li>
+                  <li><a class="dropdown-item" href="#">Marketing</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Pesquisar manualmente</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!--Formulário de pesquisa-->
+            <form id="search-form" class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="search"> <!--Barra de pesquisa-->
+              <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> <!--Botão de pesquisa-->
+              <!--Carrinho de compras-->
+              <div class="cart-group">
+                <a class="btn main-cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> <!--Carrinho-->
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> <!--Contador-->
+                </a>
+                <span class="cart-count" id="cart-count">0</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main-->
+    <main id="main">
+      <!-- Offcanvas do Carrinho -->
+      <div class="offcanvas offcanvas-end cart-display" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title cart-display-header" id="offcanvasExampleLabel">Carrinho</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="cartDetails">
+          <h6 class="total-price">Total: Kz</h6>
+          <button class="btn empty-cart">Esvaziar carrinho</button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="listCart mt-3 cartList"></div>
+          <div id="voidcart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <p>Seu carrinho está vazio</p>
+          </div>
+          <div class="checkout-button-container">
+            <button class="btn btn-primary checkout">Finalizar compra</button>
+          </div>
+        </div>
+      </div>
+      <!--Carrousel-->
+      <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <!--Indicadores do carrousel-->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!--Conteúdo interno do carrousel-->
+        <div class="carousel-inner">
+          <!--Slider 1-->
+          <div class="carousel-item active" data-bs-interval="10000">
+            <a href="" class="carousel-img">
+              <img src="/assets/img/sliders/tekken 8.avif" class="d-block w-100" alt="Tekken 8">
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">TEKKEN 8</h5>
+              <p class="slider-caption">Prepara-te para o próximo capítulo da lendária série de jogos de luta, o TEKKEN 8.</p>
+              <a class="btn btn-primary slider-btn" href="">Obter agora</a>
+            </div>
+          </div>
+          <!--Slider 2-->
+          <div class="carousel-item" data-bs-interval="5000">
+            <a href="" class="carousel-img">
+              <img src="/assets/img/sliders/nba2k24.avif" class="d-block w-100" alt="NBA 2K24">
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">NBA 2K24</h5>
+              <p class="slider-caption">Reúne a tua equipa e vive o passado, o presente e o futuro da cultura basquetebolista no NBA 2K24.</p>
+              <a class="btn btn-primary slider-btn" href="">Obter agora</a>
+            </div>  
+          </div>
+          <!--Slider 3-->
+          <div class="carousel-item" data-bs-interval="5000">
+            <a href="" class="carousel-img">
+              <img src="/assets/img/sliders/cod mw3.avif" class="d-block w-100" alt="Call Of Duty: Modern Warfare III">
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="slider-title">Call of Duty®: Modern Warfare® III</h5>
+              <p class="slider-caption">Adapta-te ou morre numa luta contra a derradeira ameaça.</p>
+              <a class="btn btn-primary slider-btn" href="">Obter agora</a>
+            </div>
+          </div>
+        </div>
+        <!--Controles do carrousel: Prev-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <!--Controles do carrousel: Next-->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+      <!--CTA de rolagem para dispositivos móveis-->
+      <div class="cta-reveal stay">
+        <h3 class="cta-title">Deslize para baixo para ver mais</h3>
+        <img src="/assets/img/banners/down arrow reveal content.gif" alt="" class="cta-image">
+      </div>
+      <!--Categorias-->
+      <section id="categories" class="reveal">
+        <div class="container">
+          <h3 class="categories-title">Compre por categorias</h3>
+          <!--Grupo de categorias-->
+          <div class="row categories-group">
+            <!-- Categoria 1-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/streaming.png" alt="Streaming">
+                  <h3 class="category-title">Streaming</h3>
+                </a>
+              </div>
+            </div>
+            <!-- Categoria 2-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/gaming.png" alt="Gaming">
+                  <h3 class="category-title">Gaming</h3>
+                </a>
+              </div>
+            </div>
+            <!--Categoria 3-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/solucoes financeiras.png" alt="Soluções Financeiras">
+                  <h3 class="category-title">Financeiro</h3>
+                </a>
+              </div>
+            </div>
+            <!--Categoria 4-->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="category">
+                <a href="">
+                  <img src="/assets/img/brand/categorias/marketing.png" alt="Marketing">
+                  <h3 class="category-title">Marketing</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Fim grupo de categorias-->
+        </div>
+      </section>
+      <!--Recomendado para si-->
+      <section id="recommended" class="reveal">
+        <!--Título-->
+        <h3 class="section-title">Recomendado para si</h3>
+        <!--Conteúdo-->
+        <div class="container">
+          <!--Conjunto de produtos-->
+          <div class="row recommended-products-home">
+          <!--Os produtos vão aparecer aqui dinamicamente-->
+          </div>
+        </div>
+        <!--Botão "Ver mais"-->
+        <div class="btn-container">
+          <button class="btn btn-primary see-more">
+            <a href="/recommended.html">Ver mais</a>
+          </button>
+        </div>
+      </section>
+      <!--Banner-->
+      <section id="banner" class="reveal">
+        <div class="card mb-3">
+          <img src="/assets/img/banners/streaming.png" class="card-img-top" alt="..."> <!--Imagem do banner-->
+          <!--Corpo do banner-->
+          <div class="card-body">
+            <h5 class="card-title">Assista o que está a seguir</h5>
+            <p class="card-text">Mergulha num mar de entretenimento sem limites com as maiores plataformas de Streaming do mundo: Netflix, HBO, Disney Plus e muito mais...</p>
+            <a href="" class="btn btn-primary see-more">Assistir agora</a>
+          </div>
+        </div>
+      </section>
+      <!--Novidades-->
+      <section id="news" class="reveal">
+        <!--Título-->
+        <h3 class="section-title">Novidades</h3>
+        <!--Conteúdo-->
+        <div class="container">
+          <!--Conjunto de produtos-->
+          <div class="row most-recent-products-home">
+          <!--Os produtos vão aparecer aqui dinamicamente-->
+          </div>
+        </div>
+        <!--Botão "Ver mais"-->
+        <div class="btn-container">
+          <button class="btn btn-primary see-more">
+            <a href="/news.html">Ver mais</a>
+          </button>
+        </div>
+      </section>
+      <!--Mais vendidos-->
+      <section id="most-sold" class="reveal">
+        <!--Título-->
+        <h3 class="section-title">Mais vendidos</h3>
+        <!--Conteúdo-->
+        <div class="container">
+          <!--Conjunto de produtos-->
+          <div class="row best-selling-products-home">
+          <!--Os produtos vão aparecer aqui dinamicamente-->
+          </div>
+        </div>
+        <!--Botão "Ver mais"-->
+        <div class="btn-container">
+          <button class="btn btn-primary see-more">
+            <a href="/most-sold.html">Ver mais</a>
+          </button>
+        </div>
+      </section>
+    </main>
+    <!--Rodapé-->
+    <footer id="footer" class="reveal">
+      <!--Cabeçalho-->
+      <div class="footer-logo-container"><img src="/assets/img/brand/logotipo.png" alt="" class="footer-logo"></div>
+      <!--Conteúdo-->
+      <div class="container">
+        <!--Conjunto de colunas-->
+        <div class="row footer-content">
+          <!--Coluna 1-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Links úteis</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item"><a href="" class="footer-list-link">Termos de utilização do site</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Mapa do site</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Perguntas frequentes</a></li>
+              <li class="footer-list-item"><a href="https://github.com/EdnilsonAntonio/Trabalho-final-web-cliente/tree/master" class="footer-list-link">Drive</a></li>
+            </ul>
+          </div>
+          <!--Coluna 2-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Redes sociais</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item"><a href="" class="footer-list-link">Facebook</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">Instagram</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">WhatsApp</a></li>
+              <li class="footer-list-item"><a href="" class="footer-list-link">X</a></li>
+            </ul>
+          </div>
+          <!--Coluna 3-->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <h4 class="footer-title">Fale connosco</h4>
+            <p class="footer-text">Preencha um breve formulário e será respondido em até 48h.</p>
+            <a href="/contact.html" class="btn btn-primary footer-btn">Falar agora</a>
+          </div>
+        </div>
+        <!--Fim conjunto de colunas-->
+      </div>
+      <!--Rodapé-->
+      <p class="copyright">© 2024 Aki Center Group, Ednilson António. Todos os direitos reservados.</p>
+    </footer>
+    <!--Botão flutuante-->
+    <button id="top-btn" class="btn" onclick="scrollBody(), toTheTop()">
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <!--Bootstrap-->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!--JavaScript-->
+    <script src="/assets/js/generalScripts.js"></script>
+    <script src="/assets/js/productsShowcase.js"></script>
+    <script src="/assets/js/fadeInScroll.js"></script>
+  </body>
+</html>
